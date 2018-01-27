@@ -9,28 +9,28 @@ import re,string,os
 import os.path,sys,urllib,shutil,subprocess,pickle
 
 cl = LINETCR.LINE()
-cl.login(token="ช่องใส่โทเค็น")
+cl.login(token="ใส่โทเค็น")
 cl.loginResult()
 
 ki = LINETCR.LINE()
-ki.login(token="ช่องใส่โทเค็น")
+ki.login(token="ใส่โทเค็น")
 ki.loginResult()
 
-kk = LINETCR.LINE()
-kk.login(token="ช่องใส่โทเค็น")
-kk.loginResult()
+#kk = LINETCR.LINE()
+#kk.login(token="ช่องใส่โทเค็น")
+#kk.loginResult()
 
-ks = LINETCR.LINE()
-ks.login(token="ช่องใส่โทเค็น")
-ks.loginResult()
+#ks = LINETCR.LINE()
+#ks.login(token="ช่องใส่โทเค็น")
+#ks.loginResult()
 
-kc = LINETCR.LINE()
-kc.login(token="ช่องใส่โทเค็น")
-kc.loginResult()
+#kc = LINETCR.LINE()
+#kc.login(token="ช่องใส่โทเค็น")
+#kc.loginResult()
 
-ka = LINETCR.LINE()
-ka.login(token="ช่องใส่โทเค็น")
-ka.loginResult()
+#ka = LINETCR.LINE()
+#ka.login(token="ช่องใส่โทเค็น")
+#ka.loginResult()
 
 with open('profileSave.pkl') as f:
     save1 = pickle.load(f)
@@ -132,13 +132,13 @@ http://line.me/ti/p/~1ove..neverdie
 ║❂➣[BLOCKINVITE: ON/OFF]ล็อกเชิญ
 ╚═══════════════════════
 """
-KAC = [cl,ki,kk,ks,kc,ka]
+KAC = [cl,ki]
 mid = cl.getProfile().mid
 Amid = ki.getProfile().mid
-kimid = kk.getProfile().mid
-ki2mid = ks.getProfile().mid
-Cmid = kc.getProfile().mid
-Emid = ka.getProfile().mid
+#kimid = kk.getProfile().mid
+#ki2mid = ks.getProfile().mid
+#Cmid = kc.getProfile().mid
+#Emid = ka.getProfile().mid
 admin = ["ud24af63fd62d14c3bf8f719df80c3745"]
 me = cl.getProfile().mid
 bot1 = cl.getProfile().mid
