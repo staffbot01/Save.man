@@ -1554,6 +1554,23 @@ def bot(op):
                 cl.sendText(msg.to,"Delete Chat Bot")
                 cl.sendText(msg.to,"Success...")
 #-----------------------------------------------------------
+#==========================================================×
+            elif msg.text.lower() == 'cl':
+                if msg.toType == 2:
+                    group = cl.getGroup(msg.to)
+                    gMembMids = [contact.mid for contact in group.invitee]
+                    for _mid in gMembMids:
+                        cl.cancelGroupInvitation(msg.to,[_mid])
+                    cl.sendText(msg.to,"💞😆ยกเลิกเชิญเรียบร้อยแล้ว😆💞")
+            elif msg.text.lower() == 'Bcancel':
+                if msg.toType == 2:
+                    group = cl.getGroup(msg.to)
+                    gMembMids = [contact.mid for contact in group.invitee]
+                    for _mid in gMembMids:
+                        ki.cancelGroupInvitation(msg.to,[_mid])
+                    ki.sendText(msg.to,"💞😆ยกเลิกเชิญเรียบร้อยแล้ว😆💞")
+                    cl.sendText(msg.to,"💞😆ยกเลิกเชิญเรียบร้อยแล้ว😆💞")
+#==========================================================
             elif "Spam @" in msg.text:
                 _name = msg.text.replace("Spam @","")
                 _nametarget = _name.rstrip(' ')
