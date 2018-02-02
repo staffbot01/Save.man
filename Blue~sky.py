@@ -791,7 +791,24 @@ def bot(op):
                         cl.sendText(msg.to,"It can't be used besides the group。")
                     else:
                         cl.sendText(msg.to,"Impossible use besides")
-            elif msg.text in ["ginfo","Ginfo"]:
+#=====================GINFO====กลุ่ม=========================
+            elif msg.text.lower() == 'ginfo':
+                ginfo = cl.getGroup(msg.to)
+                try:
+                    gCreator = ginfo.creator.displayName
+                except:
+                    gCreator = "Error"
+                if wait["lang"] == "JP":
+                    if ginfo.invitee is None:
+                        sinvitee = "0"
+                    else:
+                        sinvitee = str(len(ginfo.invitee))
+                msg.contentType = 13
+                msg.contentMetadata = {'mid': ginfo.creator.mid}
+                cl.sendText(msg.to,"[Group Name]\n" + str(ginfo.name) + "\n[Group Uid]\n" + msg.to + "\n\n[Group Creator]\n" + gCreator + "\n\nAnggota:" + str(len(ginfo.members)) + "\nInvitation:" + sinvitee + "")
+                cl.sendMessage(msg)
+#=============================================================
+            elif msg.text in ["#ginfo","เช็คกลุ่ม"]:
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
                     try:
